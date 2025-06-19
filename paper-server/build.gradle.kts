@@ -255,6 +255,10 @@ tasks.jar {
     })
 }
 
+tasks.named('processResources') {
+    dependsOn 'applyResourcePatches'
+}
+
 tasks.test {
     include("**/**TestSuite.class")
     workingDir = temporaryDir
