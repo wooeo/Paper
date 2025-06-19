@@ -42,8 +42,10 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          chmod +x gradlew
-          ./gradlew clean applyPatches createMojmapPaperclipJar --no-daemon
+          chmod +x gradlew 
+          ./gradlew clean 
+          ./gradlew applyPatches
+          ./gradlew createMojmapPaperclipJar
 
       - name: Prepare JAR
         id: prepare_jar
