@@ -19,7 +19,7 @@ jobs:
           java-version: '21'
 
       - name: Build with Gradle
-        run: chmod +x gradlew && ./gradlew clean shadowJar
+        run: chmod +x gradlew && ./gradlew clean applyPatches createMojmapPaperclipJar
 
       - name: Prepare JAR
         id: prepare_jar
